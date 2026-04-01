@@ -1,7 +1,7 @@
-url: ""
+url: https://app.bugagent.com/api/health
 status: up
 code: 200
-responseTime: 0
-lastUpdated: "2026-04-01T00:00:00.000Z"
-startTime: "2026-04-01T00:00:00.000Z"
-generator: "Upptime <https://github.com/upptime/upptime>"
+responseTime: 94
+lastUpdated: 2026-04-01T20:21:07.723Z
+startTime: 2026-04-01T00:00:00.000Z
+generator: Upptime <https://github.com/upptime/upptime>
