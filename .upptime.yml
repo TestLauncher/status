@@ -1,0 +1,83 @@
+# bugAgent Status Page — powered by Upptime
+# https://github.com/upptime/upptime
+
+owner: TestLauncher
+repo: status
+
+# Endpoints to monitor
+sites:
+  - name: bugAgent Website
+    url: https://bugagent.com
+    icon: https://bugagent.com/favicon.svg
+    maxResponseTime: 5000
+
+  - name: bugAgent Dashboard
+    url: https://app.bugagent.com
+    icon: https://bugagent.com/favicon.svg
+    maxResponseTime: 10000
+
+  - name: bugAgent API
+    url: https://app.bugagent.com/api/health
+    expectedStatusCodes:
+      - 200
+      - 404
+    maxResponseTime: 5000
+
+  - name: Supabase Database
+    url: https://nnzthekrnokziivbaheh.supabase.co/rest/v1/
+    headers:
+      - "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5uenRoZWtybm9remlpdmJhaGVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM0ODY3OTgsImV4cCI6MjA4OTA2Mjc5OH0.fLEFVIhuC-i0bOWAbn-on-SUWD9NCRzMcS8ZKTIIgdU"
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+
+  - name: Supabase Auth
+    url: https://nnzthekrnokziivbaheh.supabase.co/auth/v1/health
+    maxResponseTime: 5000
+
+  - name: MCP Server
+    url: https://mcp.bugagent.com
+    expectedStatusCodes:
+      - 200
+      - 404
+      - 405
+    maxResponseTime: 10000
+
+# Status page configuration
+status-website:
+  cname: status.bugagent.com
+  logoUrl: https://bugagent.com/favicon.svg
+  name: bugAgent Status
+  introTitle: "**bugAgent** system status"
+  introMessage: Real-time monitoring for all bugAgent services. This page is updated every 5 minutes.
+  theme: dark
+  navbar:
+    - title: Homepage
+      href: https://bugagent.com
+    - title: Dashboard
+      href: https://app.bugagent.com
+    - title: Documentation
+      href: https://bugagent.com/docs
+
+# Check frequency (every 5 minutes)
+workflowSchedule:
+  uptime: "*/5 * * * *"
+  graphs: "0 */6 * * *"
+  staticSite: "0 */12 * * *"
+  summary: "0 0 * * *"
+
+# Notifications (optional — add later)
+# notifications:
+#   - type: slack
+#     channel: C1234567890
+
+# Incident management
+i18n:
+  activeIncidents: Active incidents
+  pastIncidents: Past incidents
+  pastIncidentsResolved: Resolved
+  allSystemsOperational: All systems operational
+  notAllSystemsOperational: Not all systems are operational
+  degradedPerformance: Degraded performance
+  completeOutage: Complete outage
+  uptimePercentage: "uptime"
