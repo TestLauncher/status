@@ -16,9 +16,26 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_PAT }}
-      - name: Run Upptime
+      - name: Build Upptime site
         uses: upptime/uptime-monitor@v1.41.0
         with:
           command: "site"
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
+      - name: Find and deploy built site
+        run: |
+          EXPORT_DIR=$(find /home/runner -path "*__sapper__/export" -type d 2>/dev/null | head -1)
+          if [ -z "$EXPORT_DIR" ]; then
+            echo "ERROR: Could not find __sapper__/export directory"
+            find /home/runner -name "index.html" -path "*/export/*" 2>/dev/null
+            exit 1
+          fi
+          echo "Found export at: $EXPORT_DIR"
+          ls -la "$EXPORT_DIR"
+          cp -r "$EXPORT_DIR" ./site-output
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          publish_dir: ./site-output
+          cname: status.bugagent.com
