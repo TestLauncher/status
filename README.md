@@ -6,14 +6,14 @@ Live at: **[status.bugagent.com](https://status.bugagent.com)**
 
 ## Monitored Services
 
-| Service | URL |
-|---------|-----|
-| bugAgent Website | https://bugagent.com |
-| bugAgent Dashboard | https://app.bugagent.com |
-| bugAgent API | https://app.bugagent.com/api/health |
-| Supabase Database | Supabase REST API |
-| Supabase Auth | Supabase Auth health |
-| MCP Server | https://mcp.bugagent.com |
+| Service            | URL                                 |
+| ------------------ | ----------------------------------- |
+| bugAgent Website   | https://bugagent.com                |
+| bugAgent Dashboard | https://app.bugagent.com            |
+| bugAgent API       | https://app.bugagent.com/api/health |
+| Supabase Database  | Supabase REST API                   |
+| Supabase Auth      | Supabase Auth health                |
+| MCP Server         | https://mcp.bugagent.com            |
 
 ## How it works
 
