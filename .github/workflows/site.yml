@@ -22,20 +22,24 @@ jobs:
           command: "site"
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
-      - name: Find and deploy built site
+      - name: Find built site
+        id: find_site
         run: |
           EXPORT_DIR=$(find /home/runner -path "*__sapper__/export" -type d 2>/dev/null | head -1)
           if [ -z "$EXPORT_DIR" ]; then
-            echo "ERROR: Could not find __sapper__/export directory"
-            find /home/runner -name "index.html" -path "*/export/*" 2>/dev/null
+            EXPORT_DIR=$(find /home/runner -path "*/build" -name "index.html" -exec dirname {} \; 2>/dev/null | head -1)
+          fi
+          if [ -z "$EXPORT_DIR" ]; then
+            echo "ERROR: Could not find site build output"
+            find /home/runner -name "index.html" 2>/dev/null | head -10
             exit 1
           fi
           echo "Found export at: $EXPORT_DIR"
           ls -la "$EXPORT_DIR"
-          cp -r "$EXPORT_DIR" ./site-output
+          echo "dir=$EXPORT_DIR" >> "$GITHUB_OUTPUT"
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./site-output
+          publish_dir: ${{ steps.find_site.outputs.dir }}
           cname: status.bugagent.com
