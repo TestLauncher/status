@@ -17,17 +17,34 @@ jobs:
         with:
           token: ${{ secrets.GH_PAT }}
 
-      - name: Build Upptime site
-        uses: upptime/uptime-monitor@v1.41.0
+      - uses: actions/setup-node@v4
         with:
-          command: "site"
+          node-version: 18
+
+      - name: Clone status-page template
+        run: |
+          git clone --depth 1 https://github.com/upptime/status-page.git site-template
+          cd site-template
+          npm ci
+
+      - name: Build status page
+        run: |
+          cd site-template
+          # Copy config from parent repo
+          cp ../.upptimerc.yml .
+          # Copy api data if it exists
+          if [ -d "../api" ]; then cp -r ../api .; fi
+          if [ -d "../history" ]; then cp -r ../history .; fi
+          if [ -d "../graphs" ]; then cp -r ../graphs .; fi
+          npm run export
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_REPOSITORY: TestLauncher/status
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./site/status-page/__sapper__/export
+          publish_dir: ./site-template/__sapper__/export
           cname: status.bugagent.com
           force_orphan: true
