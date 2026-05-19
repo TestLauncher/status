@@ -1,7 +1,7 @@
 url: https://app.bugagent.com/api/health
-status: up
-code: 200
-responseTime: 12
-lastUpdated: 2026-05-18T23:22:08.492Z
+status: degraded
+code: 404
+responseTime: 10810
+lastUpdated: 2026-05-19T23:24:38.195Z
 startTime: 2026-04-01T00:00:00.000Z
 generator: Upptime <https://github.com/upptime/upptime>
