@@ -23,18 +23,18 @@
     "icon": "https://bugagent.com/favicon.svg",
     "slug": "bug-agent-dashboard",
     "status": "down",
-    "uptime": "99.99%",
-    "uptimeDay": "99.43%",
-    "uptimeWeek": "99.92%",
-    "uptimeMonth": "99.98%",
-    "uptimeYear": "99.99%",
+    "uptime": "99.95%",
+    "uptimeDay": "97.79%",
+    "uptimeWeek": "99.68%",
+    "uptimeMonth": "99.93%",
+    "uptimeYear": "99.95%",
     "time": 482,
     "timeDay": 674,
     "timeWeek": 273,
     "timeMonth": 435,
     "timeYear": 482,
     "dailyMinutesDown": {
-      "2026-05-19": 8
+      "2026-05-19": 32
     }
   },
   {
@@ -43,18 +43,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/app.bugagent.com.ico",
     "slug": "bug-agent-api",
     "status": "degraded",
-    "uptime": "99.99%",
-    "uptimeDay": "99.47%",
-    "uptimeWeek": "99.92%",
-    "uptimeMonth": "99.98%",
-    "uptimeYear": "99.99%",
+    "uptime": "99.96%",
+    "uptimeDay": "97.82%",
+    "uptimeWeek": "99.69%",
+    "uptimeMonth": "99.93%",
+    "uptimeYear": "99.96%",
     "time": 303,
     "timeDay": 10810,
     "timeWeek": 1561,
     "timeMonth": 434,
     "timeYear": 303,
     "dailyMinutesDown": {
-      "2026-05-19": 8
+      "2026-05-19": 31
     }
   },
   {
@@ -103,18 +103,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/mcp.bugagent.com.ico",
     "slug": "mcp-server",
     "status": "degraded",
-    "uptime": "99.99%",
-    "uptimeDay": "99.53%",
-    "uptimeWeek": "99.93%",
-    "uptimeMonth": "99.98%",
-    "uptimeYear": "99.99%",
+    "uptime": "99.96%",
+    "uptimeDay": "97.89%",
+    "uptimeWeek": "99.70%",
+    "uptimeMonth": "99.93%",
+    "uptimeYear": "99.96%",
     "time": 689,
     "timeDay": 21568,
     "timeWeek": 3234,
     "timeMonth": 972,
     "timeYear": 689,
     "dailyMinutesDown": {
-      "2026-05-19": 7
+      "2026-05-19": 30
     }
   }
 ]
