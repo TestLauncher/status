@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 205,
-    "timeDay": 84,
-    "timeWeek": 181,
-    "timeMonth": 186,
-    "timeYear": 205,
+    "time": 209,
+    "timeDay": 391,
+    "timeWeek": 213,
+    "timeMonth": 194,
+    "timeYear": 209,
     "dailyMinutesDown": {}
   },
   {
@@ -22,36 +22,40 @@
     "url": "https://app.bugagent.com",
     "icon": "https://bugagent.com/favicon.svg",
     "slug": "bug-agent-dashboard",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
+    "uptimeDay": "99.89%",
+    "uptimeWeek": "99.98%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 478,
-    "timeDay": 195,
-    "timeWeek": 194,
-    "timeMonth": 440,
-    "timeYear": 478,
-    "dailyMinutesDown": {}
+    "time": 482,
+    "timeDay": 674,
+    "timeWeek": 273,
+    "timeMonth": 435,
+    "timeYear": 482,
+    "dailyMinutesDown": {
+      "2026-05-19": 2
+    }
   },
   {
     "name": "bugAgent API",
     "url": "https://app.bugagent.com/api/health",
     "icon": "https://icons.duckduckgo.com/ip3/app.bugagent.com.ico",
     "slug": "bug-agent-api",
-    "status": "up",
+    "status": "degraded",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
+    "uptimeDay": "99.93%",
+    "uptimeWeek": "99.99%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 88,
-    "timeDay": 12,
-    "timeWeek": 19,
-    "timeMonth": 78,
-    "timeYear": 88,
-    "dailyMinutesDown": {}
+    "time": 303,
+    "timeDay": 10810,
+    "timeWeek": 1561,
+    "timeMonth": 434,
+    "timeYear": 303,
+    "dailyMinutesDown": {
+      "2026-05-19": 1
+    }
   },
   {
     "name": "Supabase Database",
@@ -64,11 +68,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.98%",
-    "time": 100,
-    "timeDay": 156,
-    "timeWeek": 105,
-    "timeMonth": 87,
-    "timeYear": 100,
+    "time": 102,
+    "timeDay": 216,
+    "timeWeek": 116,
+    "timeMonth": 90,
+    "timeYear": 102,
     "dailyMinutesDown": {
       "2026-04-01": 16
     }
@@ -84,11 +88,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.98%",
-    "time": 18,
-    "timeDay": 7,
-    "timeWeek": 16,
+    "time": 19,
+    "timeDay": 29,
+    "timeWeek": 18,
     "timeMonth": 17,
-    "timeYear": 18,
+    "timeYear": 19,
     "dailyMinutesDown": {
       "2026-04-01": 16
     }
@@ -98,17 +102,19 @@
     "url": "https://mcp.bugagent.com",
     "icon": "https://icons.duckduckgo.com/ip3/mcp.bugagent.com.ico",
     "slug": "mcp-server",
-    "status": "up",
+    "status": "degraded",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 263,
-    "timeDay": 170,
-    "timeWeek": 178,
-    "timeMonth": 263,
-    "timeYear": 263,
-    "dailyMinutesDown": {}
+    "time": 689,
+    "timeDay": 21568,
+    "timeWeek": 3234,
+    "timeMonth": 972,
+    "timeYear": 689,
+    "dailyMinutesDown": {
+      "2026-05-19": 0
+    }
   }
 ]
